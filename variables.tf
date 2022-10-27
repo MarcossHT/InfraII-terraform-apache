@@ -13,3 +13,7 @@ variable "tipo_instancia" {
 variable "regiao" {
     default = "us-east-2"
 }
+
+variable "ip_internet" {
+    default = "0.0.0.0/0"
+}
