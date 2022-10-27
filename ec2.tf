@@ -7,6 +7,8 @@ resource "aws_instance" "marcos_ec2" {
         "Name" = "${var.usuario}-${count.index}"
     }
 
+    vpc_security_group_ids = [aws_security_group.sg_acesso_ssh_publico.id, aws_security_group.sg_acesso_web.id]
+
     user_data = <<-EOF
     #!/bin/bash
     sudo apt update
