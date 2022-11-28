@@ -9,11 +9,11 @@ resource "aws_instance" "marcos_ec2" {
 
     vpc_security_group_ids = [aws_security_group.sg_acesso_ssh_publico.id, aws_security_group.sg_acesso_web.id]
 
-    user_data = <<-EOF
-    #!/bin/bash
-    sudo apt update
-    sudo apt install apache2 -y
-    EOF
+    # user_data = <<-EOF
+    # #!/bin/bash
+    # sudo apt update
+    # sudo apt install apache2 -y
+    # EOF
 }
 
 resource "aws_instance" "marcos_ec2_ansible" {
